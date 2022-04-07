@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day-3</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <h1>Day-3</h1>
+    <h2>FizzBuzz Pro Max</h2>
+    <p>
+        Write a function that takes an array of numbers and returns an array that contains arrays where each array contains the output that would have been spat out if the FizzBuzz function was called on the number
+
+        [4, 10, 6] => [[1,2,Fizz,4], [1,2,Fizz,4,Buzz,Fizz,7,8,Fizz,Buzz],
+    </p>
+    <div>
+        <h3>Here is my solution</h3>
+        <h4>Making use of this array - ["5", "10", "20"]</h4>
+
+        <p class="root"></p>
+        <button onclick="output()">Click Me</button>
+    </div>
+    <script>
+        var root = document.querySelector('.root');
+        var sum = ["5", "10", "20"];
+
+        function output() {
+            var first = ["1", "2", "3", "4", "5"];
+            var second = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10"];
+            var third = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20"];
+            
+            var output = "Fizz";
+            var output2 = "Buzz";
+            var output3 = "FizzBuzz";
+
+            first.forEach(function(item) {
+                if (item % 3 === 0 && item % 5 === 0) {
+                    item = output3;
+                }
+                if (item % 3 === 0) {
+                    item = output;
+                }
+                if (item % 5 === 0) {
+                    item = output2;
+                }
+                console.log(item);
+            });
+
+            second.forEach(function(item) {
+                if (item % 3 === 0 && item % 5 === 0) {
+                    item = output3;
+                }
+                if (item % 3 === 0) {
+                    item = output;
+                }
+                if (item % 5 === 0) {
+                    item = output2;
+                }
+                console.log(item);
+            });
+
+            third.forEach(function(item) {
+                if (item % 3 === 0 && item % 5 === 0) {
+                    item = output3;
+                }
+                if (item % 3 === 0) {
+                    item = output;
+                }
+                if (item % 5 === 0) {
+                    item = output2;
+                }
+                console.log(item);
+            });
+            
+        }
+
+        root.innerHTML = "Press the button below and check the console for the output";
+    </script>
+    
+</body>
+</html>
